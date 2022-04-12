@@ -18,7 +18,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace XMindParser
 {
-    public partial class XMindParser
+    public class XMindParser
     {
         public bool Overwrite = false;
 

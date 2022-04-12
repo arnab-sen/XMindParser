@@ -53,9 +53,9 @@ namespace XMindParser
             List<JObject> sheetList = new List<JObject>();
             foreach (JObject sheet in mainArray.Children<JObject>())
             {
-                XMindSheet zenSheet = new XMindSheet(fromExistingJObject: sheet);
-                SheetDictionary[sheet.Property("title").Value.ToString()] = zenSheet;
-                Sheets.Add(zenSheet);
+                XMindSheet xmindSheet = new XMindSheet(fromExistingJObject: sheet);
+                SheetDictionary[sheet.Property("title").Value.ToString()] = xmindSheet;
+                Sheets.Add(xmindSheet);
             }
         }
 
@@ -103,7 +103,7 @@ namespace XMindParser
         {
             // Each Sheet contains a root topic, the child of which is another node called the main topic
             string json = "";
-            JArray sheetArray = JArray.FromObject(Sheets.Select(zenSheet => zenSheet.Sheet));
+            JArray sheetArray = JArray.FromObject(Sheets.Select(xmindSheet => xmindSheet.Sheet));
             json = JsonConvert.SerializeObject(sheetArray);
             return json;
         }

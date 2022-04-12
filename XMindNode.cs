@@ -75,17 +75,17 @@ namespace XMindParser
             });
         }
 
-        public static explicit operator JObject(XMindNode zenNode)
+        public static explicit operator JObject(XMindNode xmindNode)
         {
-            // ((JObject)zenNode.InnerJObject.Property("children").Value).Property("attached").Value = new JArray();
+            // ((JObject)xmindNode.InnerJObject.Property("children").Value).Property("attached").Value = new JArray();
             //
-            // foreach (var child in zenNode.Children)
+            // foreach (var child in xmindNode.Children)
             // {
-            //     zenNode.AddChild(child);
+            //     xmindNode.AddChild(child);
             // }
-            zenNode.InnerJObject.Property("title").Value = zenNode.Content;
+            xmindNode.InnerJObject.Property("title").Value = xmindNode.Content;
 
-            return zenNode.InnerJObject;
+            return xmindNode.InnerJObject;
         }
 
         public JObject ToJObject()

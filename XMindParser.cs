@@ -150,7 +150,7 @@ namespace XMindParser
         public string GetJsonFromXmindFile(string xmindPath)
         {
             if (!Directory.Exists(@".\buffers")) Directory.CreateDirectory(@".\buffers");
-            string jsonPath = @".\buffers\ZenParserBuffer.json";
+            string jsonPath = @".\buffers\XMindParserBuffer.json";
             if (!File.Exists(jsonPath))
             {
                 var writer = File.CreateText(jsonPath);
@@ -171,7 +171,7 @@ namespace XMindParser
         public string Parse(string xmindPath, string appcsPath)
         {
             if (!Directory.Exists(@".\buffers")) Directory.CreateDirectory(@".\buffers");
-            string jsonPath = @".\buffers\ZenParserBuffer.json";
+            string jsonPath = @".\buffers\XMindParserBuffer.json";
             if (!File.Exists(jsonPath))
             {
                 var writer = File.CreateText(jsonPath);

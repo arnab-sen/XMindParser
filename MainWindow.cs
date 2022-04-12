@@ -204,7 +204,7 @@ namespace XMindParser
             // colourButton.Click += (object sender, RoutedEventArgs e) =>
             // {
             //     selectedInstanceNodeColour = $"#{colourPicker.SelectedColor.ToString().Substring(3)}";
-            //     newFilePath = new ZenParser().ApplyLambdaToSheetNodes(diagramFilePathDropDown.Text, "Main",
+            //     newFilePath = new XMindParser().ApplyLambdaToSheetNodes(diagramFilePathDropDown.Text, "Main",
             //         node => node.Fill =
             //             Regex.IsMatch(node.Content, @"^[<>*]") || Regex.IsMatch(node.Content, @"^Application")
             //                 ? null
@@ -217,7 +217,7 @@ namespace XMindParser
             // Button abbreviateButton = new Button() { Content = "Create diagram with only instances", Height = 23, Width = 200, Margin = new Thickness(10, 0, 0, 0) };
             // abbreviateButton.Click += (object sender, RoutedEventArgs e) =>
             // {
-            //     new ZenParser().GenerateDiagramFromCode(fileName: diagramFilePathDropDown.Text, fillColour: selectedInstanceNodeColour);
+            //     new XMindParser().GenerateDiagramFromCode(fileName: diagramFilePathDropDown.Text, fillColour: selectedInstanceNodeColour);
             // };
             // buttonHoriz.Children.Add(abbreviateButton);
 
